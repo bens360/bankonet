@@ -1,0 +1,22 @@
+package command;
+
+public class ListerTousClientsCommand implements IhmCommand{
+
+	
+	@Override
+	public Integer getId() {
+		return 1;
+	}
+
+	@Override
+	public String getLibelleMenu() {
+		// TODO Auto-generated method stub
+		return "Lister les clients";
+	}
+
+	@Override
+	public void execute() {
+		System.exit(0);
+	}
+
+}

@@ -1,0 +1,29 @@
+package client;
+
+import javax.persistence.EntityManagerFactory;
+
+import com.bankonet.Civilite;
+import com.bankonet.Client;
+
+public class InitService {
+	
+	private ClientDaoJpa clientDao;
+	
+	public void init() {
+		//insertion de 5 client dans la BDD
+		
+		
+		
+		Client client1 = new Client("58999", Civilite.MONSIEUR, "John", "Doe", "secret", "jd");
+		clientDao.save(client1);
+		
+		Client client2 = new Client("58998", Civilite.MADAME, "Paul", "Personne", "secret", "pp");
+		Client client3 = new Client("58997", Civilite.MADEMOISELLE, "Jane", "Doe", "secret", "jd");
+		Client client4 = new Client("58996", Civilite.MONSIEUR, "Paul", "Hugues", "secret", "ph");
+		Client client5 = new Client("58995", Civilite.MONSIEUR, "Raoul", "Jacques", "secret", "rj");
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+package DAO;
+
+import java.sql.ResultSet;
+import java.util.Map;
+
+import com.bankonet.Client;
+import com.bankonet.Compte;
+
+public class ClientDaoSQL extends ClientDao{
+
+	public static void setCompteMap(Client client) {
+		Map<String, Compte> comptesMap;
+		String request = "SELECT * FROM `compte_courant` WHERE id_client=" + client.getIdentifiant();
+		ResultSet rScompte = ConnexionBDD.BDDRequest(request);
+		while (rScompte.next()) {
+			//Compte compte = new Compte(numero, intitule, 
+			//String key = compte.libelle;
+			//comptesMap.put(key, compte)
+		}
+		
+		client.setComptesMap(comptesMap);
+		}
+	}

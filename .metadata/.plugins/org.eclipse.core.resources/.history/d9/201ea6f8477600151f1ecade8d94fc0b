@@ -1,0 +1,73 @@
+package DAO;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+import com.bankonet.Client;
+import com.bankonet.Compte;
+import com.sun.org.apache.xpath.internal.operations.Equals;
+
+public class ClientDao {
+
+	public static Client recupereClient() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/**
+	 * Méthode testant l'adéquation du couple login / mot de passe, renseigné par le client
+	 * @param mdpClient 
+	 * @param loginClient 
+	 * @return 
+	 */
+		public static boolean testLoginMdp(String loginClient, String mdpClient) {
+			boolean mdpOKKO = false;
+			//TODO
+			/*ArrayList<coupleLoginMDP> listLoginMDP= new ArrayList<coupleLoginMDP>();
+			for (coupleLoginMDP coupleLoginMDP : listLoginMDP) {
+				if (coupleLoginMDP.login == loginClient && coupleLoginMDP.mdp == mdpClient){
+					mdpOKKO = true;
+				}
+			}*/
+			
+			String testLogin = "a";
+			String testMDP = "a";
+			if ((loginClient == testLogin) && (mdpClient == testMDP)){
+				mdpOKKO = true;
+				System.out.println("On est OK pour le test MDP/Login");
+			}
+			return mdpOKKO;
+		}
+
+	public static Compte SelectioneCompte() {
+		System.out.println("On est dans SelectioneCompte");
+		Compte compteSelection;
+		
+		/*
+		 try {
+		Collection<Compte> collectionDesComptes = client.getComptesList();
+		for (Compte compte : collectionDesComptes) {
+			System.out.println(compte);
+		}
+		System.out.println("Choissisez le compte à crediter");
+		Scanner sc = new Scanner(System.in);
+		String choixUtilisateur = sc.nextLine();
+		compteSelectione = ?? */
+		
+		return compteSelection=null;
+	}
+
+	public static void SoldeDesComptes() {
+		System.out.println("on est dans SoldeDesComptes");
+		/*try {
+			Collection<Compte> collectionDesComptes = client.getComptesList();
+		for (Compte compte : collectionDesComptes) {
+			System.out.println("Le solde du compte: " + compte.getIntitule() + " est de : "+ compte.getSolde());
+		}
+		} catch (Exception e) {
+			System.out.println("Erreur dans Soldes des comptes");
+		} 
+		*/
+	}
+
+}

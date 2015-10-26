@@ -1,0 +1,32 @@
+package client;
+
+import javax.persistence.Persistence;
+
+import com.bankonet.Civilite;
+import com.bankonet.Client;
+import com.bankonet.CompteCourant;
+
+import DAO.CompteCourantDaoJpa;
+
+public class InitService {
+	
+	private static ClientDaoJpa clientDao = new ClientDaoJpa(Persistence.createEntityManagerFactory("bankonet-lib"));
+	private static CompteCourantDaoJpa compteCourantDao = new CompteCourantDaoJpa(Persistence.createEntityManagerFactory("bankonet-lib"));
+	
+	public static void init() {
+		//insertion de 5 client dans la BDD
+		
+		
+		
+		Client client3 = new Client("58997", Civilite.MADEMOISELLE, "Jane", "Doe", "secret", "jdd");
+		clientDao.save(client3);
+		Client client4 = new Client("58996", Civilite.MONSIEUR, "Paul", "Hugues", "secret", "ph");
+		//clientDao.save(client4);
+		Client client5 = new Client("58995", Civilite.MONSIEUR, "Raoul", "Jacques", "secret", "rj");
+		//clientDao.save(client5);
+		
+		CompteCourant cc1 = new CompteCourant("555448", "blablacc1", 2336666, 1000);
+		compteCourantDao.save(cc1);
+	}
+
+}

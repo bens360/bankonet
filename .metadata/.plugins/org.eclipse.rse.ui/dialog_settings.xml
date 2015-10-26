@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="RemoteSearchPage">
+		<item value="false" key="includeSubfolders"/>
+		<item value="false" key="stringRegex"/>
+		<item value="2" key="dataSize"/>
+		<item value="true" key="fileNameCaseSensitive"/>
+		<item value="false" key="caseSensitive"/>
+		<item value="false" key="fileNameRegex"/>
+		<item value="false" key="includeArchives"/>
+	</section>
+	<section name="RemoteSearchPage.data0">
+		<item value="*" key="fileNames"/>
+		<item value="false" key="includeSubfolders"/>
+		<item value="false" key="stringRegex"/>
+		<item value="bankonetbenoitJPA" key="searchString"/>
+		<item value="true" key="fileNameCaseSensitive"/>
+		<item value="false" key="caseSensitive"/>
+		<item value="C:\Users\public.ETY05-PC\Documents\GitHub\bankonet" key="folderName"/>
+		<item value="false" key="fileNameRegex"/>
+		<item value="false" key="includeArchives"/>
+		<item value="Local" key="connectionName"/>
+		<item value="ETY05-PC" key="profileName"/>
+	</section>
+	<section name="RemoteSearchPage.data1">
+		<item value="*" key="fileNames"/>
+		<item value="false" key="includeSubfolders"/>
+		<item value="false" key="stringRegex"/>
+		<item value="org.hibernate.ejb.HibernatePersistence" key="searchString"/>
+		<item value="true" key="fileNameCaseSensitive"/>
+		<item value="false" key="caseSensitive"/>
+		<item value="C:\Users\public.ETY05-PC\Documents\GitHub\bankonet" key="folderName"/>
+		<item value="false" key="fileNameRegex"/>
+		<item value="false" key="includeArchives"/>
+		<item value="Local" key="connectionName"/>
+		<item value="ETY05-PC" key="profileName"/>
+	</section>
+</section>

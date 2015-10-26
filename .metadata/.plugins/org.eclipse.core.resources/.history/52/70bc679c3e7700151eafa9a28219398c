@@ -1,0 +1,20 @@
+package client;
+
+import javax.persistence.EntityManagerFactory;
+
+import com.bankonet.Client;
+
+public class ClientDaoJpa {
+	
+	EntityManagerFactory emf;
+
+	public ClientDaoJpa(EntityManagerFactory emf) {
+		super();
+		this.emf = emf;
+	}
+	
+	public void save(Client client) {
+		///
+	}
+
+}

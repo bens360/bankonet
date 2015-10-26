@@ -1,0 +1,39 @@
+package command;
+
+public class ExitCommand implements IhmCommand{
+		
+	private String id = "0" ;
+	private String libelleMenu = "Arrêter le programme";
+	
+	@Override
+	public String getId() {
+		return id;
+	}
+
+
+	@Override
+	public String getLibelleMenu() {
+		// TODO Auto-generated method stub
+		return libelleMenu;
+	}
+
+
+	@Override
+	public void setId(String id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void setLibelleMenu(String libelleMenu) {
+		// TODO Auto-generated method stub
+		
+	}
+
+		
+	
+	
+}
+
+

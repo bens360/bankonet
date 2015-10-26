@@ -1,0 +1,10 @@
+package command;
+
+public interface IhmCommand {
+
+public void setId();
+public void setLibelleMenu();
+public String getId();
+public String getLibelleMenu();
+
+}

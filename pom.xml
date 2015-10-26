@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>dta</groupId>
+	<artifactId>bankonet-parent</artifactId>
+	<version>1.0.0</version>
+	
+	<modules>
+		<module>bankonet-client</module>
+		<module>bankonet-conseiller</module>
+		<module>bankonet-lib</module>
+		<module>bankonet-data</module>
+	</modules>
+	
+	<dependencyManagement>
+		 <dependencies> 
+		 <dependency>
+		  <groupId>junit</groupId>
+		  <artifactId>junit</artifactId>
+		  <version>${junit.version}</version>
+		  <scope>test</scope>
+		</dependency>
+		<dependency>
+		  <groupId>mysql</groupId>
+		  <artifactId>mysql-connector-java</artifactId>
+		  <version>${mysql.version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.apache.maven.plugins</groupId>
+		  <artifactId>maven-shade-plugin</artifactId>
+		  <version>${maven-shade-plugin.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${org.hibernate}</version>
+		</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+</project>

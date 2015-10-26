@@ -1,0 +1,51 @@
+package DAO;
+
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class JDBCConnexionBDD {
+	
+	
+	/**
+	 * Méthode créant la connexion avec la BDD
+	 * @return Statement
+	 */
+	public static java.sql.Statement jDBCconnectBDD() {
+		java.sql.Statement statement = null;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			try {
+				java.sql.Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/bankonetbenoit", "root", "");
+				statement = connection.createStatement();
+			} catch (SQLException e) {
+				System.out.println("Probléme lors de la a connexion à la BDD");
+				e.printStackTrace();
+			}
+		} catch (ClassNotFoundException e) {
+			System.out.println("Problème lors de l'instalation du driver");
+			e.printStackTrace();
+			
+		}
+		return statement;
+	}
+	
+	/**
+	 * Méthode renvoyant le resultat d'une requete (au format String) de type select 
+	 * sous la forme d'un Resultset
+	 * @param request
+	 * @return ResultSet
+	 */
+	public static ResultSet jDBCRequestBDD(String request) {
+		java.sql.Statement statement = JDBCConnexionBDD.jDBCconnectBDD();
+		ResultSet resultat = null;
+		try {
+			resultat = statement.executeQuery(request);
+			//statement.close();
+				} catch (SQLException e) {
+			System.out.println("Problème à l'execution de la requête");
+			e.printStackTrace();
+		}
+	return resultat;
+	}
+}
