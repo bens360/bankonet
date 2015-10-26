@@ -1,0 +1,22 @@
+package DAO;
+
+import java.util.ArrayList;
+
+/**
+ * Classe provisoire: objet qui évite de faire un select*
+ * @author public
+ *
+ */
+
+public class coupleLoginMDP {
+String login;
+String mdp;
+
+public static ArrayList<coupleLoginMDP> recupereCouplesLoginMDP() {
+	ArrayList<coupleLoginMDP> listLoginMDP= new ArrayList<coupleLoginMDP>();
+	
+	//TODO : appel à la BDD
+	return listLoginMDP;
+}
+
+}

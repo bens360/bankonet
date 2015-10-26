@@ -1,0 +1,18 @@
+package client;
+
+import javax.persistence.EntityManagerFactory;
+
+public class ClientDaoJpa {
+	
+	EntityManagerFactory emf;
+
+	public ClientDaoJpa(EntityManagerFactory emf) {
+		super();
+		this.emf = emf;
+	}
+	
+	public void save(Client client) {
+		///
+	}
+
+}

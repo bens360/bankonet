@@ -1,0 +1,20 @@
+1445245714200	Move method
+1445245725761	Move method
+1445245735319	Move method
+1445245969504	Move method
+1445259137546	Delete element
+1445328274652	Rename type 'ConnexionBDD'
+1445328325093	Rename method 'BDDRequest'
+1445328337288	Rename method 'connectBDD'
+1445335574647	Rename package 'designPatternCommand'
+1445336284936	Encapsulate field 'libelleMenu'
+1445340770896	Delete element
+1445343200289	Copy package
+1445343209652	Delete element
+1445343582794	Rename type 'ListerTousClientsCommand'
+1445343638226	Rename type 'ListerTousComptesClientCommand'
+1445343756736	Rename type 'OuvrirCompteCourant'
+1445354375567	Copy compilation unit
+1445508362574	Move 'pom.xml' to 'bankonet-client'
+1445508369648	Move 7 resources to 'java'
+1445508373810	Delete element

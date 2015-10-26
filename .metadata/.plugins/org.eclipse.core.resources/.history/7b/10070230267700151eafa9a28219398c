@@ -1,0 +1,19 @@
+package ihm.command;
+
+public class EffectueDepotCommand implements IhmCommand {
+	@Override
+	public Integer getId() {
+		return 2;
+	}
+
+	@Override
+	public String getLibelleMenu() {
+		// TODO Auto-generated method stub
+		return "Ouvrir compte";
+	}
+
+	@Override
+	public void execute(Client client) {
+		// TODO ouvrir le compte
+	}
+}

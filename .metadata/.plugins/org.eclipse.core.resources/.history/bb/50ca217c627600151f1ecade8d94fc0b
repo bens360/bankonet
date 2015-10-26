@@ -1,0 +1,25 @@
+package com.bankonet.test;
+
+import java.sql.ResultSet;
+
+import com.mysql.jdbc.Statement;
+
+import DAO.ConnexionBDD;
+
+public class TestBDD {
+
+	public static void main(String[] args) {
+		
+		Statement statement = ConnexionBDD.connectBDD();
+		ResultSet resultat = Statement.executeQuery("SELECT * FROM CLIENT");
+	while (resultat.next()) {
+		Integer id = resultat.getInt("id_client");
+		String nom = resultat.getString("nom");
+		String prenom = resultat.getString("prenom");
+		String civilite = resultat.getString("civilite");
+		System.out.println("Client n° " + id + " Nom: " + nom + " Prenom: " + prenom);
+	}
+
+	}
+
+}

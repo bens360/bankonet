@@ -1,0 +1,26 @@
+package DAO;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+
+import com.bankonet.CompteCourant;
+
+public class CompteCourantDaoJpa {
+
+	private EntityManagerFactory emf;
+
+	public CompteCourantDaoJpa(EntityManagerFactory emf) {
+		super();
+		this.emf = emf;
+	}
+	
+	public void save(CompteCourant compteCourant) {
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction et = em.getTransaction();
+		et.begin();
+		em.merge(compteCourant);
+		et.commit();
+		em.close();
+	}
+}

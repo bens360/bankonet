@@ -1,0 +1,19 @@
+package command;
+
+public class OuvrirCompteCourant implements IhmCommand {
+	@Override
+	public Integer getId() {
+		return 0;
+	}
+
+	@Override
+	public String getLibelleMenu() {
+		// TODO Auto-generated method stub
+		return "Arrêter le programme";
+	}
+
+	@Override
+	public void execute() {
+		System.exit(0);
+	}
+}

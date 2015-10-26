@@ -1,0 +1,24 @@
+package ihm.command;
+
+import com.bankonet.Client;
+
+import DAO.ClientDao;
+import client.InitService;
+
+public class InsereJeuxDeClient implements IhmCommand{
+	@Override
+	public Integer getId() {
+		return 3;
+	}
+
+	@Override
+	public String getLibelleMenu() {
+		return "Inserer un jeux de 5 client en BDD";
+	}
+
+	@Override
+	public void execute(Client client) {
+		InitService.init();
+	}
+
+}

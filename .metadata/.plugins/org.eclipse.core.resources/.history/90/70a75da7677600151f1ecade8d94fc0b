@@ -1,0 +1,82 @@
+package DAO;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.bankonet.Civilite;
+import com.bankonet.Client;
+import com.bankonet.Compte;
+
+public class ClientDao {
+
+	public static Client recupereClient(String loginClient ,String mdpClient ) {
+		ResultSet rSclient = ConnexionBDD.BDDRequest("SELECT* FROM client WHERE login= '"+ loginClient+"' AND mot_de_passe='"+ mdpClient);
+		Civilite civilite = null;
+		Client client = null;
+		try {
+			System.out.println(rSclient);
+			civilite = (Civilite) rSclient.getObject("civilite");
+			client = new Client(civilite, rSclient.getString("nom"), rSclient.getString("prenom"), mdpClient, loginClient);
+		} catch (SQLException e) {
+			System.out.println("Problème à la récupération du client");
+			e.printStackTrace();
+		}
+		return client;
+	}
+
+	/**
+	 * Méthode testant l'adéquation du couple login / mot de passe, renseigné par le client
+	 * @param mdpClient 
+	 * @param loginClient 
+	 * @return 
+	 */
+		public static boolean testLoginMdp(String loginClient, String mdpClient) {
+			boolean mdpOKKO = false;
+			//TODO
+			/*ArrayList<coupleLoginMDP> listLoginMDP= new ArrayList<coupleLoginMDP>();
+			for (coupleLoginMDP coupleLoginMDP : listLoginMDP) {
+				if (coupleLoginMDP.login == loginClient && coupleLoginMDP.mdp == mdpClient){
+					mdpOKKO = true;
+				}
+			}*/
+			
+			String testLogin = "a";
+			String testMDP = "a";
+			if ((loginClient.equals(testLogin)) && (mdpClient.equals(testMDP))){
+				mdpOKKO = true;
+			}
+			return mdpOKKO;
+		}
+
+	public static Compte SelectioneCompte() {
+		System.out.println("On est dans SelectioneCompte");
+		Compte compteSelection;
+		
+		/*
+		 try {
+		Collection<Compte> collectionDesComptes = client.getComptesList();
+		for (Compte compte : collectionDesComptes) {
+			System.out.println(compte);
+		}
+		System.out.println("Choissisez le compte à crediter");
+		Scanner sc = new Scanner(System.in);
+		String choixUtilisateur = sc.nextLine();
+		compteSelectione = ?? */
+		
+		return compteSelection=null;
+	}
+
+	public static void SoldeDesComptes() {
+		System.out.println("on est dans SoldeDesComptes");
+		/*try {
+			Collection<Compte> collectionDesComptes = client.getComptesList();
+		for (Compte compte : collectionDesComptes) {
+			System.out.println("Le solde du compte: " + compte.getIntitule() + " est de : "+ compte.getSolde());
+		}
+		} catch (Exception e) {
+			System.out.println("Erreur dans Soldes des comptes");
+		} 
+		*/
+	}
+
+}
